@@ -13,23 +13,18 @@ import javax.servlet.annotation.WebFilter;
 public class EncodingFilter implements Filter {
 
     public EncodingFilter() {
-        // TODO Auto-generated constructor stub
     }
 
 	public void destroy() {
-		// TODO Auto-generated method stub
 	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		// TODO Auto-generated method stub
-		// place your code here
-
-		// pass the request along the filter chain
+		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
 		chain.doFilter(request, response);
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {
-		// TODO Auto-generated method stub
 	}
 
 }
