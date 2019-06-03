@@ -1,5 +1,7 @@
 package com.gitStudy.test;
 
+import java.util.List;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -8,7 +10,7 @@ import com.gitStudy.dao.impl.UserDAOImpl;
 import com.gitStudy.utils.JdbcUtil;
 
 class TestAllMethod {
-	//初始化jdbctemplate连接技术
+	// 初始化jdbctemplate连接技术
 	private static JdbcTemplate jdbctemplate = new JdbcTemplate(JdbcUtil.getDataSource());
 	private static UserDAOImpl userDAO = new UserDAOImpl();
 	@Test
@@ -27,16 +29,18 @@ class TestAllMethod {
 	
 	@Test
 	void testDeleteUser() {
-		
+		userDAO.deletUser(1);
 	}
 	
 	@Test
 	void testGeteUser() {
-		
+		User user = userDAO.getUser(1);
+		System.out.println(user);
 	}
 	
 	@Test
 	void testListUser() {
-		
+		List<User>users = userDAO.userList();
+		System.out.println(users);
 	}
 }

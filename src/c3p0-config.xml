@@ -2,7 +2,7 @@
 <!DOCTYPE xml>
 <c3p0-config>
 	<named-config name="sheepConfig">
-		<property name="jdbcUrl">jdbc:mysql://192.168.9.15:3306/usersystem</property>
+		<property name="jdbcUrl">jdbc:mysql://192.168.9.15:3306/gitstudy</property>
 		<property name="driverClass">com.mysql.jdbc.Driver</property>
 		<property name="user">root</property>
 		<property name="password">333444</property>
