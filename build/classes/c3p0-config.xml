@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<c3p0-config>
+	<named-config name="sheepConfig">
+		<property name="jdbcUrl">jdbc:mysql://192.168.9.15:3306/gitstudy</property>
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="user">root</property>
+		<property name="password">333444</property>
+		<!-- 连接池初始化时创建的连接数 -->
+		<property name="initialPoolSize">10</property>
+		<!-- 最小连接数 -->
+		<property name="minPoolSize">3</property>
+		<!--最大连接数 -->
+		<property name="maxPoolSize">20</property>
+		<!-- 数据库连接失败收重复连接次数 -->
+		<property name="acquireRetryAttempts">1</property>
+		两次连接的间隔
+		<property name="acquireRetryDelay">500</property>
+	</named-config>
+</c3p0-config>
